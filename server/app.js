@@ -26,6 +26,11 @@ app.use(require('webpack-hot-middleware')(compiler));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use((req, res, next) => {
+  const resRef = res;
+  resRef.handle = (err, data) => resRef.status(err ? 400 : 200).send(err || data);
+  next();
+});
 
 // ROUTES
 app.use('/api', require('./routes/api'));
