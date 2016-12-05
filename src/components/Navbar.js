@@ -20,20 +20,18 @@ export default function Navbar(props) {
       </div>
       <div className="row nav">
         <div className="container navContainer">
-          <div className="verticalLine1" />
-          <Link to="/" className="navLink">Home</Link>
-          <div className="verticalLine2" />
-          <Link to="/" className="navLink">Orders</Link>
-          <div className="verticalLine3" />
-          <Link to="/" className="navLink">Account</Link>
-          <div className="verticalLine4" />
-          <div className="searchbar">
+          <ul>
+            <li><Link to="/" className="navLink">Home</Link></li>
+            <li><Link to="/" className="navLink">Orders</Link></li>
+            <li><Link to="/" className="navLink">Account</Link></li>
+          </ul>
+          <form className="searchbar">
             <input type="text" className="searchInput" />
             <input type="text" className="searchInput" />
             <button className="btn">
               <i className="glyphicon glyphicon-search" aria-hidden="true" />
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>

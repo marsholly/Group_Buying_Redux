@@ -22,44 +22,26 @@ a.login:hover {
 
 .nav {
   background-color:#BF74ED;
-  height: 50px;
+  height: 45px;
   margin-top: -12px;
 }
 
-.verticalLine1 {
-  position:absolute;
-  border-left: 2px groove white;
-  top: -7%;
-  bottom: 7%;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+.navContainer ul {
+  margin-top: 12px;
+  padding: 0;
 }
 
-.verticalLine2 {
-  position:absolute;
-  border-left: 2px groove white;
-  margin-left: 7.5%;
-  top: -7%;
-  bottom: 7%;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+.navContainer ul li {
+  list-style-type: none;
+  display: inline;
+  border-left: 1px solid white;
+  padding: 6px;
 }
 
-.verticalLine3 {
-  position:absolute;
-  border-left: 2px groove white;
-  margin-left: 16.2%;
-  top: -7%;
-  bottom: 7%;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+.navContainer ul li:last-child {
+  border-right: 1px solid white;
 }
 
-.verticalLine4 {
-  position:absolute;
-  border-left: 2px groove white;
-  margin-left: 25.6%;
-  top: -7%;
-  bottom: 7%;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
 
 a.navLink {
   font-size: 18px;
@@ -69,10 +51,6 @@ a.navLink {
   margin-right: 22px;
 }
 
-.navContainer {
-  margin-top: 12px;
-  position: relative;
-}
 
 a.navLink {
   text-decoration: none;
@@ -82,10 +60,7 @@ a.navLink {
 .searchbar {
   float: right;
   margin-right: 10px;
-}
-
-.searchInput {
-  margin-right: 10px;
+  margin-top: -40px;
 }
 
 i {
@@ -94,11 +69,11 @@ i {
 
 .btn {
   background-color: #74DFED;
-  /*margin-bottom: 2.0%*/
 }
 
 .searchInput {
   border-radius: 6px;
   border: 1px;
   height: 30px;
+  margin-right: 10px;
 }
