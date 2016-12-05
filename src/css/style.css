@@ -69,6 +69,8 @@ i {
 
 .btn {
   background-color: #74DFED;
+  border: 1px solid white;
+  height: 30px;
 }
 
 .searchInput {
@@ -76,4 +78,41 @@ i {
   border: 1px;
   height: 30px;
   margin-right: 10px;
+}
+
+.mainContainer {
+  background: linear-gradient(#66b5ff, #e6f3ff);
+  height: 566px;
+  margin-top: -2px;
+  position: relative;
+}
+
+.showcase {
+  position: absolute;
+  margin-top: 60px;
+  margin-left: 10.5%;
+  margin-right: 10.5%;
+}
+
+.looking {
+  width: 295px;
+}
+
+.lookingTitle {
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 26px;
+  margin-left: 5px;
+}
+
+.lookingCase {
+  background-color: white;
+  width: 100%;
+  border-radius: 8px;
+  height: 350px;
+}
+
+.case {
+  width: 845px;
+  background-color: green;
 }

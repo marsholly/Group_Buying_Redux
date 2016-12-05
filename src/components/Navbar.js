@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
 const handinhand = require('../images/handinhand.png');
@@ -26,14 +26,19 @@ export default function Navbar(props) {
             <li><Link to="/" className="navLink">Account</Link></li>
           </ul>
           <form className="searchbar">
-            <input type="text" className="searchInput" />
-            <input type="text" className="searchInput" />
+            <input type="text" className="searchInput" placeholder="City, State" />
+            <input type="text" className="searchInput" placeholder="ZipCode" />
             <button className="btn">
               <i className="glyphicon glyphicon-search" aria-hidden="true" />
             </button>
           </form>
         </div>
+        {props.children}
       </div>
     </div>
   );
 }
+
+Navbar.propTypes = {
+  children: PropTypes.object, // eslint-disable-line
+};
