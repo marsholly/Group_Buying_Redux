@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import LookingForPage from './LookingForPage';
-import SampleDealList from './SampleDealList';
+import { Link } from 'react-router';
 // import * as ABActions from '../actions/ABActions';
+@connect(
+  state => ({
 
-export default class HomePage extends Component {
+  }),
+  dispatch => ({
+
+  })
+)
+export default class SampleDealList extends Component {
   render() {
     return (
-      <div className="mainContainer">
-        <div className="showcase">
-          <div className="row">
-            <LookingForPage />
-            <div className="col-md-9 col-xs-6">
-              <div className="case">
-                <SampleDealList />
-              </div>
-            </div>
-          </div>
-        </div>
+      <div >
+        hello
       </div>
     );
   }

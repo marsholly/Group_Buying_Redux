@@ -113,6 +113,11 @@ i {
 }
 
 .case {
-  width: 845px;
+  width: 795px;
   background-color: green;
+  margin-left: 45px;
+}
+
+.list-group-item {
+  padding: 20px;
 }
