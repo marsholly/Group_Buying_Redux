@@ -1,17 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
-// import * as ABActions from '../actions/ABActions';
+import { getSampleDeals } from '../actions/DealActions';
+
 @connect(
-  state => ({
-
-  }),
-  dispatch => ({
-
-  })
+  state =>{
+    return {
+      deals: state.dealsReducers,
+    }
+  },
+  dispatch => {
+    return {
+      getSampleDeals() {
+        dispatch(getSampleDeals())
+      },
+    }
+  }
 )
 export default class SampleDealList extends Component {
+  componentWillMount() {
+    this.props.getSampleDeals();
+  }
   render() {
+    const { deals } = this.props;
+    console.log('deals:', deals)
     return (
       <div >
         hello
@@ -19,19 +31,3 @@ export default class SampleDealList extends Component {
     );
   }
 };
-
-// function mapStateToProps(state) {
-//   return{
-//     todos: state.todos
-//   }
-// }
-
-// function mapDispatchToProps(dispatch) {
-//   return {
-//     x(data) {
-//       dispatch(createTodo(data));
-//     },
-//   }
-// }
-//
-// export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
