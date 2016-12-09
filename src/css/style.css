@@ -113,11 +113,40 @@ i {
 }
 
 .case {
-  width: 795px;
-  background-color: green;
-  margin-left: 45px;
+  float: right;
+  margin-top: 10px;
+  margin-left: 10px;
+  /*width: 795px;*/
+  /*width: 100%;*/
+  /*background-color: green;*/
 }
 
 .list-group-item {
   padding: 20px;
+}
+
+.cardImg {
+  width: 256px;
+  height: 165px;
+}
+
+.cardInfo {
+  height: 60px;
+  background-color: white;
+  margin-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+}
+
+.cardTitle {
+  color: #0088cc;
+  float: left;
+}
+
+.cardPrice {
+  color: orange;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 22px;
 }

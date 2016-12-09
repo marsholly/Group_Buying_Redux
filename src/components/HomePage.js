@@ -11,11 +11,7 @@ export default class HomePage extends Component {
         <div className="showcase">
           <div className="row">
             <LookingForPage />
-            <div className="col-md-9 col-xs-6">
-              <div className="case">
-                <SampleDealList />
-              </div>
-            </div>
+            <SampleDealList />
           </div>
         </div>
       </div>

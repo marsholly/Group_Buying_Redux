@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 export default class LookingForPage extends Component {
   render() {
     return (
-      <div className="col-md-3 col-xs-6">
+      <div className="col-xs-6 col-md-3">
         <div className="looking">
           <p className="lookingTitle">I'm looking for</p>
           <div className="lookingCase">
