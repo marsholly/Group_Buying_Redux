@@ -116,9 +116,6 @@ i {
   float: right;
   margin-top: 10px;
   margin-left: 10px;
-  /*width: 795px;*/
-  /*width: 100%;*/
-  /*background-color: green;*/
 }
 
 .list-group-item {
@@ -132,6 +129,7 @@ i {
 
 .cardInfo {
   height: 60px;
+  width: 256px;
   background-color: white;
   margin-bottom: 20px;
   font-family: 'Ubuntu', sans-serif;

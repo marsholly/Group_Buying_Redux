@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
 import { getSampleDeals } from '../actions/DealActions';
 import _ from 'lodash';
 import { Card, Image } from 'semantic-ui-react'
@@ -19,7 +18,7 @@ import { Card, Image } from 'semantic-ui-react'
     }
   }
 )
-export default class SampleDealList extends Component {
+export default class FoodSample extends Component {
   componentWillMount() {
     this.props.getSampleDeals();
   }
@@ -28,9 +27,12 @@ export default class SampleDealList extends Component {
     if(deals) {
       const { items } = deals;
       const sampleGroups = _.shuffle(items);
-      const samples = sampleGroups.slice(0,6);
-      const sampleCards =samples.map((sample) => {
-        const { image, price, title, id } = sample.deal;
+      const samples = sampleGroups.filter((sample) => {
+        const { category } = sample.deal;
+        return category === 'Food & Drink';
+      });
+      const sampleFoodCards = samples.map((sampleFood) => {
+        const { image, price, title, id } = sampleFood.deal;
         return (
           <div className="col-xs-12 col-sm-4" key={id}>
             <Card>
@@ -52,7 +54,7 @@ export default class SampleDealList extends Component {
       return (
         <div className="col-xs-12 col-sm-6 col-md-9">
           <div className="row case">
-            {sampleCards}
+            {sampleFoodCards}
           </div>
         </div>
       );
